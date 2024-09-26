@@ -31,7 +31,7 @@ struct MainView: View {
                 .tag(Tab.favourite)
                 .setUpTab()
             
-            Text("Profile")
+            ProfileTab()
                 .tag(Tab.profile)
                 .setUpTab()
         }

@@ -31,6 +31,9 @@
 		4A0DEE6B2CA5B2FB00EF74A4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE6A2CA5B2FB00EF74A4 /* Task.swift */; };
 		4A0DEE6D2CA5B30A00EF74A4 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE6C2CA5B30A00EF74A4 /* Expense.swift */; };
 		4A0DEE6F2CA5B3BB00EF74A4 /* SpeedoMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE6E2CA5B3BB00EF74A4 /* SpeedoMeter.swift */; };
+		4A0DEE722CA5B51D00EF74A4 /* ProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE712CA5B51D00EF74A4 /* ProfileTab.swift */; };
+		4A0DEE742CA5B56100EF74A4 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE732CA5B56100EF74A4 /* ProfilePage.swift */; };
+		4A0DEE762CA5B5BF00EF74A4 /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE752CA5B5BF00EF74A4 /* ScrollDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		4A0DEE6A2CA5B2FB00EF74A4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4A0DEE6C2CA5B30A00EF74A4 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		4A0DEE6E2CA5B3BB00EF74A4 /* SpeedoMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedoMeter.swift; sourceTree = "<group>"; };
+		4A0DEE712CA5B51D00EF74A4 /* ProfileTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTab.swift; sourceTree = "<group>"; };
+		4A0DEE732CA5B56100EF74A4 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		4A0DEE752CA5B5BF00EF74A4 /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		4A0DEE492CA5AF3B00EF74A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A0DEE702CA5B50600EF74A4 /* ProfileTab */,
 				4A0DEE5D2CA5B21500EF74A4 /* TaskView */,
 				4A0DEE512CA5AFE100EF74A4 /* SpeedoMeter */,
 				4A0DEE4C2CA5AF6F00EF74A4 /* CustomTabBar */,
@@ -202,6 +209,7 @@
 				4A0DEE572CA5B12200EF74A4 /* Date+Extensions.swift */,
 				4A0DEE592CA5B12E00EF74A4 /* OffsetKey.swift */,
 				4A0DEE5B2CA5B14100EF74A4 /* View+Extensions.swift */,
+				4A0DEE752CA5B5BF00EF74A4 /* ScrollDetector.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -232,6 +240,15 @@
 				4A0DEE6C2CA5B30A00EF74A4 /* Expense.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4A0DEE702CA5B50600EF74A4 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				4A0DEE712CA5B51D00EF74A4 /* ProfileTab.swift */,
+				4A0DEE732CA5B56100EF74A4 /* ProfilePage.swift */,
+			);
+			path = ProfileTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,8 +384,10 @@
 				4A0DEE532CA5AFF600EF74A4 /* AnimatedText.swift in Sources */,
 				4A0DEE5F2CA5B22200EF74A4 /* TaskPage.swift in Sources */,
 				4A0DEE202CA5AE3A00EF74A4 /* ContentView.swift in Sources */,
+				4A0DEE742CA5B56100EF74A4 /* ProfilePage.swift in Sources */,
 				4A0DEE5C2CA5B14100EF74A4 /* View+Extensions.swift in Sources */,
 				4A0DEE652CA5B25D00EF74A4 /* TasksView.swift in Sources */,
+				4A0DEE762CA5B5BF00EF74A4 /* ScrollDetector.swift in Sources */,
 				4A0DEE582CA5B12200EF74A4 /* Date+Extensions.swift in Sources */,
 				4A0DEE6D2CA5B30A00EF74A4 /* Expense.swift in Sources */,
 				4A0DEE4E2CA5AF8300EF74A4 /* CustomTabBar.swift in Sources */,
@@ -379,6 +398,7 @@
 				4A0DEE5A2CA5B12E00EF74A4 /* OffsetKey.swift in Sources */,
 				4A0DEE632CA5B24900EF74A4 /* TaskRowView.swift in Sources */,
 				4A0DEE552CA5B01C00EF74A4 /* IndicatorShape.swift in Sources */,
+				4A0DEE722CA5B51D00EF74A4 /* ProfileTab.swift in Sources */,
 				4A0DEE4B2CA5AF5700EF74A4 /* Home.swift in Sources */,
 				4A0DEE6B2CA5B2FB00EF74A4 /* Task.swift in Sources */,
 				4A0DEE1E2CA5AE3A00EF74A4 /* exp_tracker_0_1App.swift in Sources */,
