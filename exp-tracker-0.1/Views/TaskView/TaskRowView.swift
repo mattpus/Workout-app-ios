@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct TaskRowView: View {
-    @Bindable var task: Task
+struct WorkoutRowView: View {
+    @Bindable var workout: Workout
     /// Model Context
     @Environment(\.modelContext) private var context
     /// Direct TextField Binding Making SwiftData to Crash, Hope it will be rectified in the Further Releases!
     /// Workaround use separate @State Variable
-    @State private var taskTitle: String = ""
+    @State private var workoutTitle: String = ""
     var body: some View {
         HStack(alignment: .top, spacing: 15) {
             Circle()
@@ -28,40 +28,40 @@ struct TaskRowView: View {
                         .frame(width: 50, height: 50)
                         .onTapGesture {
                             withAnimation(.snappy) {
-                                task.isCompleted.toggle()
+                                workout.isCompleted.toggle()
                             }
                         }
                 }
             
             VStack(alignment: .leading, spacing: 8, content: {
-                TextField("Task Title", text: $taskTitle)
+                TextField("Workout Title", text: $workoutTitle)
                     .fontWeight(.semibold)
                     .foregroundStyle(.black)
                     .onSubmit {
                         /// If TaskTitle is Empty, Then Deleting the Task!
                         /// You can remove this feature, if you don't want to delete the Task even after the TextField is Empty
-                        if taskTitle == "" {
-                            context.delete(task)
+                        if workoutTitle == "" {
+                            context.delete(workout)
                             try? context.save()
                         }
                     }
-                    .onChange(of: taskTitle, initial: false) { oldValue, newValue in
-                        task.taskTitle = newValue
+                    .onChange(of: workoutTitle, initial: false) { oldValue, newValue in
+                        workout.name = newValue
                     }
                     .onAppear {
-                        if taskTitle.isEmpty {
-                            taskTitle = task.taskTitle
+                        if workoutTitle.isEmpty {
+                            workoutTitle = workout.name
                         }
                     }
                 
-                Label(task.creationDate.format("hh:mm a"), systemImage: "clock")
+                Label(workout.creationDate.format("hh:mm a"), systemImage: "clock")
                     .font(.caption)
                     .foregroundStyle(.black)
             })
             .padding(15)
             .hSpacing(.leading)
-            .background(task.tintColor, in: .rect(topLeadingRadius: 15, bottomLeadingRadius: 15))
-            .strikethrough(task.isCompleted, pattern: .solid, color: .black)
+            .background(workout.tintColor, in: .rect(topLeadingRadius: 15, bottomLeadingRadius: 15))
+            .strikethrough(workout.isCompleted, pattern: .solid, color: .black)
             .contentShape(.contextMenuPreview, .rect(cornerRadius: 15))
             .contextMenu {
                 Button("Delete Task", role: .destructive) {
@@ -69,7 +69,7 @@ struct TaskRowView: View {
                     /// For Context Menu Animation to Finish
                     /// If this causes any Bug, Remove it!
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        context.delete(task)
+                        context.delete(workout)
                         try? context.save()
                     }
                 }
@@ -79,11 +79,11 @@ struct TaskRowView: View {
     }
     
     var indicatorColor: Color {
-        if task.isCompleted {
+        if workout.isCompleted {
             return .green
         }
         
-        return task.creationDate.isSameHour ? .blue : (task.creationDate.isPast ? .red : .black)
+        return workout.creationDate.isSameHour ? .blue : (workout.creationDate.isPast ? .red : .black)
     }
 }
 

@@ -34,6 +34,9 @@
 		4A0DEE722CA5B51D00EF74A4 /* ProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE712CA5B51D00EF74A4 /* ProfileTab.swift */; };
 		4A0DEE742CA5B56100EF74A4 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE732CA5B56100EF74A4 /* ProfilePage.swift */; };
 		4A0DEE762CA5B5BF00EF74A4 /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0DEE752CA5B5BF00EF74A4 /* ScrollDetector.swift */; };
+		4A5084492D32948E00F1DDF5 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5084482D32948800F1DDF5 /* Plan.swift */; };
+		4A7B4AD82D8B78690082B442 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B4AD72D8B78610082B442 /* Workout.swift */; };
+		4A7B4ADA2D8B79370082B442 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B4AD92D8B79360082B442 /* Exercise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		4A0DEE712CA5B51D00EF74A4 /* ProfileTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTab.swift; sourceTree = "<group>"; };
 		4A0DEE732CA5B56100EF74A4 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		4A0DEE752CA5B5BF00EF74A4 /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
+		4A5084482D32948800F1DDF5 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		4A7B4AD72D8B78610082B442 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		4A7B4AD92D8B79360082B442 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 			children = (
 				4A0DEE382CA5AE3D00EF74A4 /* exp_tracker_0_1UITests.swift */,
 				4A0DEE3A2CA5AE3D00EF74A4 /* exp_tracker_0_1UITestsLaunchTests.swift */,
+				4A5084482D32948800F1DDF5 /* Plan.swift */,
 			);
 			path = "exp-tracker-0.1UITests";
 			sourceTree = "<group>";
@@ -236,6 +243,8 @@
 		4A0DEE692CA5B2E100EF74A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4A7B4AD92D8B79360082B442 /* Exercise.swift */,
+				4A7B4AD72D8B78610082B442 /* Workout.swift */,
 				4A0DEE6A2CA5B2FB00EF74A4 /* Task.swift */,
 				4A0DEE6C2CA5B30A00EF74A4 /* Expense.swift */,
 			);
@@ -387,13 +396,16 @@
 				4A0DEE742CA5B56100EF74A4 /* ProfilePage.swift in Sources */,
 				4A0DEE5C2CA5B14100EF74A4 /* View+Extensions.swift in Sources */,
 				4A0DEE652CA5B25D00EF74A4 /* TasksView.swift in Sources */,
+				4A7B4ADA2D8B79370082B442 /* Exercise.swift in Sources */,
 				4A0DEE762CA5B5BF00EF74A4 /* ScrollDetector.swift in Sources */,
 				4A0DEE582CA5B12200EF74A4 /* Date+Extensions.swift in Sources */,
 				4A0DEE6D2CA5B30A00EF74A4 /* Expense.swift in Sources */,
 				4A0DEE4E2CA5AF8300EF74A4 /* CustomTabBar.swift in Sources */,
 				4A0DEE502CA5AF8B00EF74A4 /* BottomCurve.swift in Sources */,
+				4A7B4AD82D8B78690082B442 /* Workout.swift in Sources */,
 				4A0DEE482CA5AECF00EF74A4 /* MainView.swift in Sources */,
 				4A0DEE612CA5B23C00EF74A4 /* NewTaskView.swift in Sources */,
+				4A5084492D32948E00F1DDF5 /* Plan.swift in Sources */,
 				4A0DEE682CA5B2AD00EF74A4 /* AppViewModel.swift in Sources */,
 				4A0DEE5A2CA5B12E00EF74A4 /* OffsetKey.swift in Sources */,
 				4A0DEE632CA5B24900EF74A4 /* TaskRowView.swift in Sources */,

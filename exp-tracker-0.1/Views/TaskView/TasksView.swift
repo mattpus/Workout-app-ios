@@ -13,6 +13,7 @@ struct TasksView: View {
     @Binding var currentDate: Date
     /// SwiftData Dynamic Query
     @Query private var tasks: [Task]
+    @Query(sort: \Workout.name) private var workouts: [Workout]
     init(size: CGSize, currentDate: Binding<Date>) {
         self._currentDate = currentDate
         self.size = size
@@ -31,10 +32,10 @@ struct TasksView: View {
     }
     var body: some View {
         VStack(alignment: .leading, spacing: 35) {
-            ForEach(tasks) { task in
-                TaskRowView(task: task)
+            ForEach(workouts) { workout in
+               WorkoutRowView(workout: workout)
                     .background(alignment: .leading) {
-                        if tasks.last?.id != task.id {
+                        if workouts.last?.id != workout.id {
                             Rectangle()
                                 .frame(width: 1)
                                 .offset(x: 8)
@@ -46,8 +47,8 @@ struct TasksView: View {
         .padding([.vertical, .leading], 15)
         .padding(.top, 15)
         .overlay {
-            if tasks.isEmpty {
-                Text("No Task's Found")
+            if workouts.isEmpty {
+                Text("No Workouts Found")
                     .font(.caption)
                     .foregroundStyle(.gray)
                     .frame(width: 150)

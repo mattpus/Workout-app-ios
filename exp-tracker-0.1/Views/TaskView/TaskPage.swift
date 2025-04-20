@@ -111,8 +111,10 @@ struct TaskPage: View {
         .hSpacing(.leading)
         .overlay(alignment: .topTrailing, content: {
             Button(action: {}, label: {
-               Text("This should be an image")
-                    
+                Image("Pic")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 45, height: 45)
                     .clipShape(.circle)
             })
         })

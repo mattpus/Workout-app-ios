@@ -16,9 +16,10 @@ struct MainView: View {
     init(){
         UITabBar.appearance().isHidden = true
     }
+    
     var body: some View {
         TabView(selection: $appModel.currentTab) {
-            Home(animation: _animation)
+            Home()
                 .environmentObject(appModel)
                 .tag(Tab.home)
                 .setUpTab()
@@ -64,7 +65,7 @@ extension View{
         self
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background{
-                Color(.systemBackground)
+                Color(.systemGray6)
                     .ignoresSafeArea()
             }
     }

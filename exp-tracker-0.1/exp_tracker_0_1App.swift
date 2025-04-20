@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct exp_tracker_0_1App: App {
@@ -13,5 +14,10 @@ struct exp_tracker_0_1App: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Workout.self)
+    }
+    
+    init() {
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
     }
 }

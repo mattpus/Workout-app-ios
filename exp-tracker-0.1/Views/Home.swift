@@ -11,7 +11,7 @@ struct Home: View {
     @State var progress: CGFloat = 0.5
     // MARK: Current Month
     @State var currentMonth: String = "Jan"
-    @Namespace var animation
+//    @Namespace var animation
     
     var body: some View {
         VStack(spacing: 15){
@@ -44,9 +44,9 @@ struct Home: View {
             
             // MARK: Custom Gradient Card
             VStack{
-                Text("Saved This Month")
+                Text("Lifted this month")
                     .fontWeight(.semibold)
-                    .foregroundColor(.white.opacity(0.7))
+                    .foregroundColor(.black.opacity(0.7))
                 
                 AnimatedNumberText(value: progress * 1299, font: .system(size: 35, weight: .black),isCurrency: true)
                     .foregroundColor(Color("VeryLightGreen"))
@@ -64,16 +64,14 @@ struct Home: View {
             .background{
                 RoundedRectangle(cornerRadius: 45, style: .continuous)
                     .fill(
-                    
                         .linearGradient(colors: [
-                        
                             Color("LightGreen")
                                 .opacity(0.4),
                             Color("LightGreen")
                                 .opacity(0.2),
                             Color("LightGreen")
                                 .opacity(0.1),
-                        ] + Array(repeating: Color.clear, count: 5), startPoint: .topTrailing, endPoint: .bottomLeading)
+                        ] + Array(repeating: Color(.systemGray4), count: 5), startPoint: .topTrailing, endPoint: .bottomLeading)
                     )
             }
             .padding(.top,15)
@@ -81,10 +79,10 @@ struct Home: View {
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
         .padding(.top,15)
-        .background{
-            Color("BG")
-                .ignoresSafeArea()
-        }
+//        .background{
+//            Color("BG")
+//                .ignoresSafeArea()
+//        }
         .onAppear{
             progress = progressArray[0]
         }

@@ -87,10 +87,11 @@ struct NewTaskView: View {
             Spacer(minLength: 0)
             
             Button(action: {
-                /// Saving Task
-                let task = Task(taskTitle: taskTitle, creationDate: taskDate, tint: taskColor)
+                /// Saving
+                
+                let workout = Workout(name: taskTitle, duration: 50, exercises: [], creationDate: taskDate, isCompleted: false, tint: taskColor)
                 do {
-                    context.insert(task)
+                    context.insert(workout)
                     try context.save()
                     /// After Successful Task Creation, Dismissing the View
                     dismiss()

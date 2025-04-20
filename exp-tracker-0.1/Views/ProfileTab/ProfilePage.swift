@@ -54,7 +54,7 @@ struct ProfilePage: View {
         GeometryReader { _ in
             ZStack {
                 Rectangle()
-                    .fill(Color("Pink").gradient)
+                    .fill(Color("PinkColor").gradient)
                 
                 VStack(spacing: 15) {
                     /// Profile Image
