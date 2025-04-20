@@ -37,6 +37,8 @@
 		4A5084492D32948E00F1DDF5 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5084482D32948800F1DDF5 /* Plan.swift */; };
 		4A7B4AD82D8B78690082B442 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B4AD72D8B78610082B442 /* Workout.swift */; };
 		4A7B4ADA2D8B79370082B442 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B4AD92D8B79360082B442 /* Exercise.swift */; };
+		C97A5CA12DB597FB008B913F /* AddWorkoutTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A5CA02DB597FB008B913F /* AddWorkoutTemplateView.swift */; };
+		C97A5CA32DB59AF7008B913F /* AddWorkoutTemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A5CA22DB59AF7008B913F /* AddWorkoutTemplateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		4A5084482D32948800F1DDF5 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		4A7B4AD72D8B78610082B442 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		4A7B4AD92D8B79360082B442 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		C97A5CA02DB597FB008B913F /* AddWorkoutTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutTemplateView.swift; sourceTree = "<group>"; };
+		C97A5CA22DB59AF7008B913F /* AddWorkoutTemplateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutTemplateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 				4A0DEE512CA5AFE100EF74A4 /* SpeedoMeter */,
 				4A0DEE4C2CA5AF6F00EF74A4 /* CustomTabBar */,
 				4A0DEE4A2CA5AF5700EF74A4 /* Home.swift */,
+				C97A5CA02DB597FB008B913F /* AddWorkoutTemplateView.swift */,
 				4A0DEE1F2CA5AE3A00EF74A4 /* ContentView.swift */,
 				4A0DEE472CA5AECF00EF74A4 /* MainView.swift */,
 			);
@@ -236,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				4A0DEE672CA5B2AD00EF74A4 /* AppViewModel.swift */,
+				C97A5CA22DB59AF7008B913F /* AddWorkoutTemplateViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -397,11 +403,13 @@
 				4A0DEE5C2CA5B14100EF74A4 /* View+Extensions.swift in Sources */,
 				4A0DEE652CA5B25D00EF74A4 /* TasksView.swift in Sources */,
 				4A7B4ADA2D8B79370082B442 /* Exercise.swift in Sources */,
+				C97A5CA32DB59AF7008B913F /* AddWorkoutTemplateViewModel.swift in Sources */,
 				4A0DEE762CA5B5BF00EF74A4 /* ScrollDetector.swift in Sources */,
 				4A0DEE582CA5B12200EF74A4 /* Date+Extensions.swift in Sources */,
 				4A0DEE6D2CA5B30A00EF74A4 /* Expense.swift in Sources */,
 				4A0DEE4E2CA5AF8300EF74A4 /* CustomTabBar.swift in Sources */,
 				4A0DEE502CA5AF8B00EF74A4 /* BottomCurve.swift in Sources */,
+				C97A5CA12DB597FB008B913F /* AddWorkoutTemplateView.swift in Sources */,
 				4A7B4AD82D8B78690082B442 /* Workout.swift in Sources */,
 				4A0DEE482CA5AECF00EF74A4 /* MainView.swift in Sources */,
 				4A0DEE612CA5B23C00EF74A4 /* NewTaskView.swift in Sources */,

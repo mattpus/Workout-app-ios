@@ -11,6 +11,8 @@ struct Home: View {
     @State var progress: CGFloat = 0.5
     // MARK: Current Month
     @State var currentMonth: String = "Jan"
+    @Environment(\.modelContext) private var modelContext
+    @State private var showingAddTemplateSheet = false // State to control sheet presentation
 //    @Namespace var animation
     
     var body: some View {
@@ -41,6 +43,19 @@ struct Home: View {
             }
             .foregroundColor(.white)
             .padding(.horizontal)
+
+            // Button to add new workout template
+            Button {
+                showingAddTemplateSheet = true // Set state to true to show the sheet
+            } label: {
+                Label("Add Workout Template", systemImage: "plus.circle.fill")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .padding(.top) // Add some spacing above the button
             
             // MARK: Custom Gradient Card
             VStack{
@@ -84,7 +99,12 @@ struct Home: View {
 //                .ignoresSafeArea()
 //        }
         .onAppear{
-            progress = progressArray[0]
+            // Assuming progressArray exists elsewhere or needs definition
+            // progress = progressArray[0] 
+        }
+        .sheet(isPresented: $showingAddTemplateSheet) {
+            // Present AddWorkoutTemplateView when showingAddTemplateSheet is true
+            AddWorkoutTemplateView(modelContext: modelContext)
         }
     }
     
